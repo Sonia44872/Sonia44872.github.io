@@ -1,32 +1,59 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #fdfbf5; /* cream/white background */
+    color: #333;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 2rem;
     text-align: center;
+    padding: 2rem 1rem;
+    background-color: #f0f0f0; /* light grey block */
+}
+
+header h1 {
+    margin-bottom: 1rem;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ccc;
 }
 
 main {
-    padding: 2rem;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-section {
-    margin-bottom: 2rem;
+section.about-me {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.block {
+    background-color: #e0e0e0; /* grey blocks for sections */
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.block h3 {
+    margin-top: 0;
+}
+
+.block ul {
+    margin: 0.5rem 0 0 1rem;
 }
 
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #333;
-    color: white;
+    background-color: #f0f0f0;
+    margin-top: 2rem;
 }
