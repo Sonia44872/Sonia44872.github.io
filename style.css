@@ -1,60 +1,76 @@
+/* General site styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fdfbf5; /* cream/white background */
-    color: #333;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  background-color: #fdfbf5;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: #f0f0f0; /* light grey block */
+  background-color: #e0e0e0;
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
-header h1 {
-    margin-bottom: 1rem;
+header img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 2px solid #aaa;
+  object-fit: cover;
+  margin-top: 1rem;
 }
 
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid #ccc;
+nav {
+  background-color: #d8d8d8;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #555;
 }
 
 main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-section.about-me {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
 .block {
-    background-color: #e0e0e0; /* grey blocks for sections */
-    padding: 1.5rem;
-    border-radius: 8px;
+  background-color: #eee;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
 }
 
-.block h3 {
-    margin-top: 0;
+h1, h2, h3 {
+  font-weight: 600;
 }
 
-.block ul {
-    margin: 0.5rem 0 0 1rem;
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #0b59d1;
 }
 
 footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f0f0f0;
-    margin-top: 2rem;
+  background-color: #e0e0e0;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
