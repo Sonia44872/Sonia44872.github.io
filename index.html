@@ -1,102 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="description" content="Official website of Sarah-Sonia Balan — mathematics student, writing enthusiast">
+  <meta name="description" content="Official website of Sarah-Sonia Bălan — mathematics student, writing enthusiast.">
   <meta name="keywords" content="Sarah-Sonia Bălan, Sonia Balan, University of Manchester, Mathematics, LMS, Math Education, Research, Writing, UK">
   <meta name="author" content="Sarah-Sonia Bălan">
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sarah-Sonia Balan | Mathematics Student at the University of Manchester</title>
+  <title>Sarah-Sonia Bălan | Mathematics</title>
 
-  <!-- Fonts: serif for headings, clean sans for text -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
 
   <style>
-    /* ===== Base reset ===== */
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     html {
-      scroll-behavior: smooth; /* smooth scrolling to anchors */
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background-color: #faf8f3; /* soft off-white */
+      background-color: #faf8f3;
       color: #2f2b2b;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
 
-    main {
-      max-width: 780px;
+    .page {
+      max-width: 900px;
       margin: 40px auto 60px;
-      padding: 0 20px 40px;
+      padding: 0 20px;
     }
 
-    /* ===== Top area ===== */
-    .intro {
+    /* Top bar: name + menu */
+    .top-bar {
       display: flex;
-      gap: 24px;
       align-items: center;
+      justify-content: space-between;
       margin-bottom: 32px;
+      gap: 20px;
     }
 
-    .intro-text {
+    .name-block {
       flex: 1;
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #8a7e7e;
+      margin-bottom: 0.5rem;
     }
 
     h1 {
       font-family: 'Merriweather', "Times New Roman", serif;
-      font-size: clamp(2.2rem, 3vw, 2.8rem);
+      font-size: clamp(2.1rem, 3vw, 2.6rem);
       font-weight: 700;
-      margin-bottom: 0.25rem;
       color: #201c1c;
-    }
-
-    .tagline {
-      font-size: 0.98rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #7c7474;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.3rem;
     }
 
     .subtitle {
-      font-size: 1.02rem;
+      font-size: 0.98rem;
       color: #4b4444;
+      max-width: 28rem;
     }
 
-    .profile-pic {
-      width: 120px;
-      height: 120px;
-      border-radius: 999px;
-      object-fit: cover;
-      border: 1px solid rgba(0,0,0,0.1);
-      flex-shrink: 0;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .profile-pic:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-    }
-
-    /* ===== Simple text nav ===== */
     nav {
-      margin-bottom: 24px;
+      display: flex;
+      gap: 1.4rem;
       font-size: 0.95rem;
+      flex-shrink: 0;
     }
 
     nav a {
-      margin-right: 1.2rem;
       text-decoration: none;
       color: #5c4f4f;
       position: relative;
       padding-bottom: 2px;
       transition: color 0.2s ease;
+      white-space: nowrap;
     }
 
     nav a::after {
@@ -118,42 +104,47 @@
       width: 100%;
     }
 
-    /* ===== Sections ===== */
+    .profile-pic {
+      width: 110px;
+      height: 110px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 1px solid rgba(0,0,0,0.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      margin-bottom: 24px;
+    }
+
+    .profile-pic:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+    }
+
+    main {
+      max-width: 760px;
+    }
+
     section {
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
     }
 
     h2 {
       font-family: 'Merriweather', "Times New Roman", serif;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       margin-bottom: 0.75rem;
       color: #201c1c;
     }
 
     h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.35rem;
-      color: #2c2525;
-      font-weight: 600;
-    }
-
-    h4 {
-      margin-top: 0.3rem;
+      font-size: 1.08rem;
       margin-bottom: 0.3rem;
       color: #2c2525;
-      font-size: 1.05rem;
       font-weight: 600;
     }
 
     p {
       margin-bottom: 0.9rem;
       font-size: 0.98rem;
-    }
-
-    ul {
-      margin-left: 1.3rem;
-      margin-bottom: 1rem;
-      font-size: 0.96rem;
     }
 
     a {
@@ -167,6 +158,12 @@
       color: #21406e;
     }
 
+    ul {
+      margin-left: 1.3rem;
+      margin-bottom: 1rem;
+      font-size: 0.96rem;
+    }
+
     blockquote {
       border-left: 3px solid #c4b6a6;
       padding-left: 1rem;
@@ -175,42 +172,49 @@
       margin: 0.6rem 0 0.8rem;
     }
 
-    /* ===== “Cards” / blocks ===== */
-    .block {
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 1.1rem 1.2rem;
+    /* Cards / blocks */
+    .card {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 1.05rem 1.2rem;
       border-radius: 10px;
-      margin-top: 1.1rem;
+      margin-top: 1rem;
       border: 1px solid rgba(0,0,0,0.04);
       box-shadow: 0 10px 26px rgba(0,0,0,0.03);
       transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
       opacity: 0;
-      transform: translateY(12px);
+      transform: translateY(10px);
     }
 
-    .block.visible {
+    .card.visible {
       opacity: 1;
       transform: translateY(0);
-      transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.2s ease;
+      transition: opacity 0.35s ease, transform 0.35s ease;
     }
 
-    .block:hover {
+    .card:hover {
       transform: translateY(-2px);
       box-shadow: 0 14px 30px rgba(0,0,0,0.06);
       background-color: #fffdfa;
     }
 
-    /* ===== Contact & footer ===== */
-    .contact {
-      font-size: 0.96rem;
+    .card small {
+      display: block;
+      font-size: 0.82rem;
+      color: #877a7a;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact p {
+      margin-bottom: 0.6rem;
     }
 
     footer {
-      text-align: center;
-      padding: 1.5rem 20px 2rem;
+      margin-top: 30px;
+      padding-top: 1.3rem;
+      border-top: 1px solid rgba(0,0,0,0.05);
       font-size: 0.85rem;
       color: #7a6f6f;
-      border-top: 1px solid rgba(0,0,0,0.05);
+      text-align: center;
     }
 
     footer .quote {
@@ -222,129 +226,188 @@
       color: #6a605f;
     }
 
-    /* ===== Responsive ===== */
-    @media (max-width: 640px) {
-      main {
-        margin-top: 24px;
-      }
-      .intro {
-        flex-direction: column-reverse;
+    @media (max-width: 720px) {
+      .top-bar {
+        flex-direction: column;
         align-items: flex-start;
       }
+      nav {
+        margin-top: 0.5rem;
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .page {
+        margin-top: 24px;
+      }
       .profile-pic {
-        width: 110px;
-        height: 110px;
+        width: 100px;
+        height: 100px;
       }
     }
   </style>
 </head>
 
 <body>
-  <main>
-    <header class="intro">
-      <div class="intro-text">
+  <div class="page">
+    <header class="top-bar">
+      <div class="name-block">
         <div class="tagline">Mathematics · Education · Writing</div>
-        <h1>Sarah-Sonia Balan</h1>
-        <p class="subtitle">Mathematics student at the University of Manchester, interested in abstract algebra, maths education, and the stories behind mathematical ideas.</p>
+        <h1>Sarah-Sonia Bălan</h1>
+        <p class="subtitle">
+          Mathematics student at the University of Manchester, interested in abstract algebra, mathematics education, and the stories behind mathematical ideas.
+        </p>
       </div>
-      <img src="sonia2.jpg" alt="Sonia's picture" class="profile-pic">
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <nav>
-      <a href="#about">About</a>
-      <a href="#roles">What I do</a>
-      <a href="#contact">Contact</a>
-      <a href="maths.html">Maths</a>
-      <a href="nonmaths.html">Non-maths</a>
-    </nav>
-
-    <main-content>
+    <main>
       <section id="about">
+        <img src="sonia2.jpg" alt="Sonia's picture" class="profile-pic">
         <h2>About me</h2>
         <p>
-          Hello, I am Sonia. I am currently a Mathematics student at the University of Manchester. My interests lie in abstract algebra (in particular, non-commutative algebra!) and mathematics education.
+          I am Sonia, a Mathematics student at the University of Manchester. My main interests are in abstract algebra
+          (especially non-commutative algebra) and mathematics education.
         </p>
         <p>
-          I also hold a number of roles at the University: Library Student Team member, Student Rep Coordinator, Peer-assisted Study Sessions Coordinator, MathSoc committee member, and general helper with departmental initiatives (a bit of a mouthful). Outside of mathematics, I am passionate about continental philosophy, reading, and writing. One day I hope to bring these strands together more coherently; for now I am still exploring the world and myself.
+          Around these, I have collected a number of roles in the department and across the university: Library Student
+          Team member, Student Rep Coordinator, PASS (Peer-assisted Study Sessions) Coordinator, MathSoc committee member,
+          and general helper with departmental initiatives. A common thread is that I like working behind the scenes to
+          make things run more smoothly for other students.
         </p>
         <p>
-          This picture of me was taken when I was handed 3rd place for the <strong>University of Manchester “Volunteer of the Year Award”</strong> for work undertaken that supports other students.
+          Outside of mathematics, I am very attached to continental philosophy, reading, and writing, and I am slowly
+          finding ways to let these interests talk to each other. I am originally from Romania, and Manchester has become
+          an intellectual home for me.
         </p>
         <p>
-          Because I guessed you might be wondering where my name is from – I am from Romania.
+          The picture above was taken when I received 3rd place in the
+          <strong>University of Manchester “Volunteer of the Year Award”</strong> for work supporting other students.
         </p>
       </section>
 
-      <section id="roles">
-        <h2>What do I do?</h2>
-        <p>You will find a common denominator amongst my roles: I like working behind the scenes.</p>
+      <section id="projects">
+        <h2>Maths & academic projects</h2>
 
-        <div class="block">
-          <h4>Library Student Team Member</h4>
+        <div class="card">
+          <h3>Maths stuff</h3>
           <p>
-            I started this role in September 2024. Broadly, it involves helping refresh and support the study-skills workshops delivered by the library to UoM students. More specifically, I work on updating and QA-ing workshop materials to make sure they are relevant, representative and accessible. I was also involved in other projects, including helping design and deliver a poster presentation at the Institute of Teaching and Learning conference about alternative assessments in higher education.
+            My maths interests, as I said, extend in two dimensions: abstract algebra and maths education. I am of the firm
+            conviction that the scientific community is really bad at communicating and this is why maths has such a bad
+            name. I will probably write a reflective piece on this but for the time being, I recommend you read Paul
+            Lockhart's <em>A Mathematician's Lament</em>.
           </p>
+          <p>
+            Here is my pride and joy: my maths education summer research internship project under Prof. Louise Walker:
+          </p>
+          <ul>
+            <li>
+              <a href="Maths_Edu_project____Facilitating_Effective_Learning_in_AA + appendix.pdf" target="_blank">
+                My maths education project (Facilitating Effective Learning in Abstract Algebra)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="writing">
+        <h2>Writing & non-maths interests</h2>
+
+        <div class="card">
+          <h3>Philosophy & writing</h3>
+          <p>
+            As I said, I love philosophy; more specifically I am interested in existentialism and absurdism (both worthy
+            solutions to nihilism!). I’m really passionate about writing and hope to publish more on my personal blog.
+            I am quite a reflective person (or so I've been told!) and I need a medium to let all my reflections outwards.
+          </p>
+          <ul>
+            <li>
+              <a href="https://mancunion.com/2025/01/29/the-big-journey-to-fermats-little-theorem/" target="_blank">
+                My article for the Mancunion about Fermat's Little Theorem
+              </a>
+            </li>
+            <li>
+              <a href="https://vahagnaslanyan.wordpress.com/2025/10/08/the-summer-i-became-a-mathematician-reflections-on-the-lms-summer-school-and-my-project/" target="_blank">
+                My reflections about this summer featured in Dr. Vahagn Aslanyan's blog
+              </a>
+            </li>
+          </ul>
         </div>
 
-        <div class="block">
-          <h4>Student Rep Coordinator</h4>
+        <div class="card">
+          <h3>Books that influence me</h3>
           <p>
-            I am passionate about driving change at the university. My role involves making the student rep system more visible and helping to ensure that feedback loops between students and staff actually function in practice.
+            I have quite an interesting relationship with literature and books in general. Some books I read shaped who I am
+            and, for the past year, some books literally helped me recover my language cognition skills. I will outline those
+            books that, if you were to read them, you'd understand a bit better why I am the way I am.
           </p>
+          <ul>
+            <li><em>The Stranger</em> by Albert Camus</li>
+            <li><em>The Gay Science</em> by Friedrich Nietzsche</li>
+            <li><em>Iona</em> by Marin Sorescu</li>
+            <li><em>Kafka on the Shore</em> by Haruki Murakami</li>
+            <li><em>A Mathematician's Lament</em> by Paul Lockhart</li>
+            <li><em>Love and Math: The Heart of Hidden Reality</em> by Edward Frenkel</li>
+            <li><em>How I Wish I’d Taught Maths</em> by Craig Barton</li>
+          </ul>
         </div>
 
-        <div class="block">
-          <h4>PASS Coordinator</h4>
-          <p>
-            As a PASS Coordinator, I design weekly teaching materials based on activities I explored in my summer maths education project, and I train PASS Leaders in how to facilitate them (for example self- and peer-feedback, self-explanation, and distributed learning activities).
-          </p>
+        <div class="card">
+          <h3>Music</h3>
+          <p>Similarly, here are some albums that shaped me:</p>
+          <ul>
+            <li><em>The Family Jewels</em> by Marina (then Marina and The Diamonds)</li>
+            <li><em>Tata Kazika</em> by Kult</li>
+            <li><em>Piła tango</em> by Strachy Na Lachy</li>
+            <li><em>Life in Cartoon Motion</em> by Mika</li>
+          </ul>
         </div>
 
-        <div class="block">
-          <h4>MathSoc Committee Member</h4>
+        <div class="card">
+          <h3>Other hobbies</h3>
           <p>
-            In MathSoc I help ensure that academic activities run smoothly, including taking the lead for two years on organising a UK-wide maths competition.
+            Outside my academic and philosophical interests, I enjoy volunteering and of course, writing. I see these
+            activities as part of the same curiosity that drives my work in mathematics and education.
           </p>
-        </div>
-
-        <div class="block">
-          <h4>Manchester Interdisciplinary Mathematics Undergraduate Conference Organiser</h4>
           <p>
-            This role speaks to my values of seeing mathematics as interdisciplinary and communal. I help shape the conference programme and support undergraduate speakers in sharing their work.
+            Last time when I volunteered, I helped out at the Manchester Literature Festival. It was an amazing experience
+            where I got to hear spoken word on reggae beats, meet Marcus du Sautoy, and hear the poems of Seamus Heaney.
           </p>
-        </div>
-
-        <div class="block">
-          <h4>Fellowship of the Higher Education Academy (FHEA) — pending</h4>
-          <p>Here’s an excerpt from the conclusion of my FHEA application:</p>
-          <blockquote>
-            “As demonstrated above, I took on many opportunities both within my department, my faculty, and at the library. My continued motivation behind these is for two reasons:
-            Firstly, ever since I first set foot in this university, I felt at home. After some negative experiences back in high-school, I view UoM as a supportive, collaborative and inclusive environment, full of people that want others to succeed. I was suddenly faced with a life-altering health event last year and part of my successful recovery was thanks to this community. My activities are a way of giving this community something back, whilst also improving the accessibility of the experience of teaching and learning for students.
-            Similarly, my work within the maths department is a representation of my maths teachers that believed that I could become the person I am now.”
-          </blockquote>
         </div>
       </section>
 
       <section id="contact" class="contact">
         <h2>Contact</h2>
-        <p>Feel free to contact me at: <br>
-          <a href="mailto:sarah-sonia.balan@student.manchester.ac.uk">sarah-sonia.balan (at) student.manchester.ac.uk</a>
+        <p>
+          Email (university):<br>
+          <a href="mailto:sarah-sonia.balan@student.manchester.ac.uk">
+            sarah-sonia.balan (at) student.manchester.ac.uk
+          </a>
         </p>
         <p>
-          <a href="Sarah_Sonia_Balan_CV (3).pdf" target="_blank">View my CV</a>
+          CV:<br>
+          <a href="Sarah_Sonia_Balan_CV (3).pdf" target="_blank">Download my CV (PDF)</a>
         </p>
       </section>
-    </main-content>
-  </main>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Sonia</p>
-    <p class="quote">“And with that, step forward on the path of wisdom with a bold step and full of confidence.” — Friedrich Nietzsche</p>
-  </footer>
+    <footer>
+      <p>&copy; 2025 Sonia</p>
+      <p class="quote">
+        “And with that, step forward on the path of wisdom with a bold step and full of confidence.” — Friedrich Nietzsche
+      </p>
+    </footer>
+  </div>
 
   <script>
-    // Fade in the .block elements on scroll
-    const blocks = document.querySelectorAll('.block');
+    // Fade-in for cards on scroll
+    const cards = document.querySelectorAll('.card');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -354,7 +417,8 @@
       });
     }, { threshold: 0.15 });
 
-    blocks.forEach(block => observer.observe(block));
+    cards.forEach(card => observer.observe(card));
   </script>
 </body>
 </html>
+
