@@ -3,50 +3,199 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maths | Sonia's Page</title>
-  <link rel="stylesheet" href="style.css">
-<style> 
-  footer .quote {
-  margin-top: 0.5rem;
-  font-style: italic;
-  font-size: 0.9rem;
-  color: #555;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-  </style> 
+  <title>Maths & Academic Projects | Sarah-Sonia Bălan</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #faf8f3;
+      color: #2f2b2b;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 40px auto 60px;
+      padding: 0 20px;
+    }
+
+    header {
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-family: 'Merriweather', "Times New Roman", serif;
+      font-size: clamp(2rem, 3vw, 2.4rem);
+      font-weight: 700;
+      color: #201c1c;
+      margin-bottom: 0.4rem;
+    }
+
+    .subtitle {
+      font-size: 0.96rem;
+      color: #5b5151;
+      max-width: 32rem;
+    }
+
+    nav {
+      margin-top: 14px;
+      margin-bottom: 30px;
+      display: flex;
+      gap: 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      color: #5c4f4f;
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 2px;
+      transition: color 0.2s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: #5c4f4f;
+      transition: width 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #312626;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      max-width: 760px;
+    }
+
+    h2 {
+      font-family: 'Merriweather', "Times New Roman", serif;
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #201c1c;
+    }
+
+    h3 {
+      font-size: 1.08rem;
+      margin-bottom: 0.3rem;
+      color: #2c2525;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 0.9rem;
+      font-size: 0.98rem;
+    }
+
+    ul {
+      margin-left: 1.3rem;
+      margin-bottom: 1rem;
+      font-size: 0.96rem;
+    }
+
+    a {
+      color: #315a9a;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #21406e;
+    }
+
+    .block {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 1.2rem 1.3rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+      border: 1px solid rgba(0,0,0,0.04);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.03);
+    }
+
+    footer {
+      margin-top: 30px;
+      padding-top: 1.3rem;
+      border-top: 1px solid rgba(0,0,0,0.05);
+      font-size: 0.85rem;
+      color: #7a6f6f;
+      text-align: center;
+    }
+
+    footer .quote {
+      margin-top: 0.5rem;
+      font-style: italic;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #6a605f;
+    }
+  </style>
 </head>
 <body>
+  <div class="page">
+    <header>
+      <h1>Maths & academic projects</h1>
+      <p class="subtitle">
+        A slightly longer look at my mathematical interests, research, and academic work.
+      </p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="maths.html">Maths</a>
+        <a href="nonmaths.html">Non-maths</a>
+      </nav>
+    </header>
 
-<header>
-  <h1>Maths & Academic Projects</h1>
-</header>
+    <main>
+      <section>
+        <div class="block">
+          <h2>Research & projects</h2>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="maths.html">Maths</a>
-  <a href="nonmaths.html">Non-Maths</a>
-</nav>
+          <div class="block">
+            <h3>Maths stuff</h3>
+            <p>
+              My maths interests, as I said, extend in two dimensions: abstract algebra and maths education.
+              I am of the firm conviction that the scientific community is really bad at communicating and
+              this is why maths has such a bad name. I will probably write a reflective piece on this but for
+              the time being, I recommend you read Paul Lockhart's <em>A Mathematician's Lament</em>.
+            </p>
+            <p>
+              Here is my pride and joy: my maths education summer research internship project under
+              Prof. Louise Walker:
+            </p>
+            <ul>
+              <li>
+                <a href="Maths_Edu_project____Facilitating_Effective_Learning_in_AA + appendix.pdf" target="_blank">
+                  My maths education project (Facilitating Effective Learning in Abstract Algebra)
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
 
-<main>
-  <div class="block">
-    <h2>Research & Projects</h2>
-
-      <div class="block">
-        <h3>Maths Stuff</h3>
-        <p>My maths interests, as I said, extend in two dimensions: Abstract Algebra and Maths Education. I am of the firm conviction that the scientific community is really bad at communicating and this is why maths has such a bad name. I will probably write a reflective piece on this but for the time being, I recommed you to read Paul Lockhart's A Mathematician's Lament.</p>
-        <p>Here is my pride and joy: my maths edu summer research internship project under prof. Louise Walker</p>
-        <ul>
-          <li><a href="Maths_Edu_project____Facilitating_Effective_Learning_in_AA + appendix.pdf" target="_blank">My maths education project</a></li>
-        </ul>
-      </div>
-
-</main>
-
-  <footer>
-  <p>&copy; 2025 Sonia</p>
-  <p class="quote">“And with that, step forward on the path of wisdom with a bold step and full of confidence.” — Friedrich Nietzsche</p>
-</footer>
+    <footer>
+      <p>&copy; 2025 Sonia</p>
+      <p class="quote">
+        “And with that, step forward on the path of wisdom with a bold step and full of confidence.” — Friedrich Nietzsche
+      </p>
+    </footer>
+  </div>
 </body>
 </html>
+
