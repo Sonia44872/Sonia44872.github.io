@@ -89,6 +89,35 @@
       opacity: 0;
       animation: fadein 1s ease forwards;
     }
+    .two-col {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 30px;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.about-text {
+  text-align: left;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  object-fit: cover;
+}
+
+/* Mobile: stack columns */
+@media (max-width: 720px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+  .about-image {
+    margin-top: 20px;
+  }
+}
+
 
     .about p {
       margin-bottom: 1.1rem;
