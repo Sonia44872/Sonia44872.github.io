@@ -3,35 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maths & Academic Projects | Sarah-Sonia Balan</title>
 
-  <meta name="description" content="Maths and academic projects of Sarah-Sonia Bălan.">
-  <meta name="author" content="Sarah-Sonia Bălan">
+  <title>Maths &amp; Academic Projects | Sarah-Sonia Balan</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="Mathematics research and academic projects of Sarah-Sonia Balan, including work on Ore extensions, quantum Lie superalgebras, arithmetic geometry and mathematics education."
+  >
+  <meta name="author" content="Sarah-Sonia Balan">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Merriweather:wght@300;700&amp;display=swap"
+    rel="stylesheet"
+  >
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       background: #faf8f3;
       color: #2f2b2b;
       font-family: "Inter", sans-serif;
-      line-height: 1.75;
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
 
     .page {
-      max-width: 760px;
+      max-width: 980px;
       margin: 60px auto 80px;
-      padding: 0 20px;
+      padding: 0 24px;
     }
 
-    /* Header: name + tagline + nav */
     h1.site-title {
       font-family: "Merriweather", serif;
-      font-size: clamp(2.2rem, 4vw, 2.8rem);
+      font-size: clamp(2.1rem, 4vw, 2.8rem);
       font-weight: 700;
       margin-bottom: 0.4rem;
       color: #1c1818;
@@ -65,8 +75,9 @@
     nav a::after {
       content: "";
       position: absolute;
-      bottom: 0; left: 0;
-      width: 0%;
+      bottom: 0;
+      left: 0;
+      width: 0;
       height: 1px;
       background: #5a4e4e;
       transition: width 0.25s ease;
@@ -81,53 +92,102 @@
     }
 
     main {
-      max-width: 620px;
-      margin: 0 auto;
-      text-align: left;
       opacity: 0;
       animation: fadein 0.9s ease forwards;
     }
 
+    .intro {
+      max-width: 720px;
+      margin: 0 auto 2rem;
+      text-align: center;
+    }
+
     h2 {
       font-family: "Merriweather", serif;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
       color: #1c1818;
     }
 
-    h3 {
-      font-size: 1.05rem;
-      margin-top: 1.2rem;
-      margin-bottom: 0.4rem;
-      color: #2a2424;
-      font-weight: 600;
-    }
-
-    p {
+    .intro p {
+      color: #514949;
       font-size: 1rem;
-      margin-bottom: 1rem;
     }
 
-    ul {
-      margin-left: 1.3rem;
-      margin-bottom: 1rem;
-      font-size: 0.97rem;
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+      align-items: stretch;
     }
 
-    a {
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.58);
+      border: 1px solid #e5ded4;
+      border-radius: 14px;
+      padding: 1.45rem;
+      box-shadow: 0 6px 18px rgba(49, 40, 34, 0.045);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 9px 22px rgba(49, 40, 34, 0.075);
+    }
+
+    .project-label {
+      color: #866753;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      color: #252020;
+      font-family: "Merriweather", serif;
+      font-size: 1.08rem;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-card p {
+      font-size: 0.94rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .supervisor {
+      color: #6b6262;
+      font-size: 0.86rem !important;
+    }
+
+    .project-link {
+      align-self: flex-start;
       color: #315a9a;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-top: auto;
       text-decoration: none;
-      transition: color 0.2s ease;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .project-link:hover {
       color: #21406e;
+      text-decoration: underline;
     }
 
     @keyframes fadein {
-      from { opacity: 0; transform: translateY(6px);}
-      to   { opacity: 1; transform: translateY(0);}
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     footer {
@@ -136,12 +196,26 @@
       color: #7c7272;
       font-size: 0.85rem;
     }
+
+    @media (max-width: 720px) {
+      .page {
+        margin-top: 40px;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        gap: 1.25rem;
+      }
+    }
   </style>
 </head>
 
 <body>
   <div class="page">
-    <h1 class="site-title">Sarah-Sonia Balan</h1>
+    <h1 class="site-title">Sarah-Sonia Balan, FHEA</h1>
     <div class="tagline">Mathematics · Education · Writing</div>
 
     <nav>
@@ -152,38 +226,114 @@
     </nav>
 
     <main>
-      <h2>Maths & academic projects</h2>
+      <section class="intro">
+        <h2>Maths &amp; academic projects</h2>
 
-      <p>
-        My maths interests extend in two main directions: abstract algebra and maths education.
-        I am of the firm conviction that the scientific community is really bad at communicating,
-        and this is part of why mathematics has such a bad name. I will probably write a reflective
-        piece on this, but for the time being, I recommend you read Paul Lockhart's
-        <em>A Mathematician's Lament</em>.
-      </p>
+        <p>
+          I gravitate most towards noncommutative algebra and representation theory and everything in between. I also work in mathematics education,
+          and my current MMath project is giving me the chance to explore arithmetic
+          geometry.
+        </p>
+      </section>
 
-      <h3>Maths education project</h3>
-      <p>
-        Here is my pride and joy: my maths education summer research internship project
-        under Prof. Louise Walker:
-      </p>
-      <ul>
-        <li>
-          <a href="Maths_Edu_project____Facilitating_Effective_Learning_in_AA + appendix.pdf" target="_blank">
-            Facilitating Effective Learning in Abstract Algebra (project report + appendix)
+      <section class="project-grid" aria-label="Academic projects">
+        <article class="project-card">
+          <div class="project-label">Current · 2026–27</div>
+
+          <h3>Supersingular elliptic curves and quaternion algebras</h3>
+
+          <p>
+            For my MMath project, I am beginning to explore supersingular elliptic
+            curves and the quaternion algebras that arise from their endomorphisms.
+          </p>
+
+          <p class="supervisor">
+            Supervised by Martin Orr at the University of Manchester.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-label">Research internship · Summer 2026</div>
+
+          <h3>Quantum knot invariants built from typical representations of a Lie superalgebra</h3>
+
+          <p>
+            Through the AGQ CDT’s Count Me In programme, I studied typical
+            highest-weight representations of
+            U<sub>h</sub>(sl(3|1)). I used induced Kac modules and the PBW theorem
+            to construct a basis and determine its weights, before moving on to
+            generator actions and braid-group automorphisms.
+          </p>
+
+          <p class="supervisor">
+            Supervised by Jenny Brown at the University of Edinburgh.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-label">Third-year project · 2025–26</div>
+
+          <h3>Noetherianity of noncommutative polynomial rings</h3>
+
+          <p>
+            I studied skew polynomial rings and formal differential operator rings
+            through the unifying language of Ore extensions. The project focused on
+            Noetherianity, simplicity and the behaviour of prime ideals in these
+            noncommutative rings.
+          </p>
+
+          <p class="supervisor">
+            Supervised by Dr Omar León Sánchez at the University of Manchester.
+            The project received 86% and was one of the five highest-scoring
+            double projects in my cohort.
+          </p>
+        </article>
+
+        <article class="project-card">
+<div class="project-label">LMS undergraduate research bursary · Summer 2025</div>
+
+          <h3>Facilitating effective learning in abstract algebra and proof comprehension</h3>
+
+          <p>
+ Supported by an undergraduate research bursary from the London Mathematical
+  Society, my first research project explored how students learn abstract algebra and how
+  teaching can better support the transition to proof-based mathematics. This
+  project remains my pride and joy, and it led to further work in student
+  partnership, conference presentations and the main case for my Fellowship in Higher Education application.
+</p>
+
+<p>
+  My work in this area also contributed to the co-authored article
+  <a href="https://journals.gre.ac.uk/index.php/msor/article/view/1681"
+     target="_blank"
+     rel="noopener noreferrer">
+    “1+1 is greater than 1: Developing Scholarship with Students as Partners”
+  </a>,
+  published in <em>MSOR Connections</em> in 2026.
+</p>
+
+<p class="supervisor">
+  Supervised by Professor Louise Walker at the University of Manchester.
+</p>
+
+<a
+  class="project-link"
+  href="Maths_Edu_project____Facilitating_Effective_Learning_in_AA + appendix.pdf"
+  target
+
+          <a
+            class="project-link"
+            href="Maths_Edu_project____Facilitating_Effective_Learning_in_AA + appendix.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read the project report →
           </a>
-        </li>
-        <p>Currently, I am also undertaking a module on Mathematics Education, so this is NOT a phase.</p>
-      </ul>
-
-
-      <h3>Noetherianity over skew polynomial rings</h3>
-      <p> This section is under construction, until I figure out an accessible way to explain what I do every other day for my year 3 undergraduate research project under Dr. Omar Leon Sanchez.</p>
+        </article>
+      </section>
     </main>
 
-    <footer>
-      © 2026 Sonia Balan
-    </footer>
+    <footer>© 2026 Sonia Balan</footer>
   </div>
 </body>
 </html>
