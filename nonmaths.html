@@ -3,35 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Writing & Non-maths Interests | Sarah-Sonia Balan</title>
 
-  <meta name="description" content="Writing, philosophy, books, music, and non-mathematical interests of Sarah-Sonia Bălan.">
-  <meta name="author" content="Sarah-Sonia Bălan">
+  <title>Writing &amp; Communication | Sarah-Sonia Balan</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="Writing, mathematics communication, public engagement and creative interests of Sarah-Sonia Balan."
+  >
+  <meta name="author" content="Sarah-Sonia Balan">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Merriweather:wght@300;700&amp;display=swap"
+    rel="stylesheet"
+  >
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       background: #faf8f3;
       color: #2f2b2b;
       font-family: "Inter", sans-serif;
-      line-height: 1.75;
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
 
     .page {
-      max-width: 760px;
+      max-width: 980px;
       margin: 60px auto 80px;
-      padding: 0 20px;
+      padding: 0 24px;
     }
 
-    /* Header: name + tagline + nav */
     h1.site-title {
       font-family: "Merriweather", serif;
-      font-size: clamp(2.2rem, 4vw, 2.8rem);
+      font-size: clamp(2.1rem, 4vw, 2.8rem);
       font-weight: 700;
       margin-bottom: 0.4rem;
       color: #1c1818;
@@ -65,8 +75,9 @@
     nav a::after {
       content: "";
       position: absolute;
-      bottom: 0; left: 0;
-      width: 0%;
+      bottom: 0;
+      left: 0;
+      width: 0;
       height: 1px;
       background: #5a4e4e;
       transition: width 0.25s ease;
@@ -81,72 +92,221 @@
     }
 
     main {
-      max-width: 620px;
-      margin: 0 auto;
-      text-align: left;
       opacity: 0;
       animation: fadein 0.9s ease forwards;
     }
 
+    .intro {
+      max-width: 720px;
+      margin: 0 auto 2.4rem;
+      text-align: center;
+    }
+
     h2 {
       font-family: "Merriweather", serif;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
       color: #1c1818;
     }
 
-    h3 {
-      font-size: 1.05rem;
-      margin-top: 1.2rem;
-      margin-bottom: 0.4rem;
-      color: #2a2424;
-      font-weight: 600;
-    }
-
-    p {
+    .intro p {
+      color: #514949;
       font-size: 1rem;
-      margin-bottom: 1rem;
     }
 
-    ul {
-      margin-left: 1.3rem;
-      margin-bottom: 1rem;
-      font-size: 0.97rem;
+    .section-heading {
+      font-family: "Merriweather", serif;
+      font-size: 1.3rem;
+      color: #1c1818;
+      margin: 2.6rem 0 1rem;
     }
 
-    a {
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+      align-items: stretch;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.58);
+      border: 1px solid #e5ded4;
+      border-radius: 14px;
+      padding: 1.45rem;
+      box-shadow: 0 6px 18px rgba(49, 40, 34, 0.045);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 9px 22px rgba(49, 40, 34, 0.075);
+    }
+
+    .card-label {
+      color: #866753;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      color: #252020;
+      font-family: "Merriweather", serif;
+      font-size: 1.08rem;
+      line-height: 1.4;
+      margin-bottom: 0.7rem;
+    }
+
+    .card p {
+      font-size: 0.94rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .card-link {
+      align-self: flex-start;
       color: #315a9a;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-top: auto;
       text-decoration: none;
-      transition: color 0.2s ease;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .card-link:hover {
       color: #21406e;
+      text-decoration: underline;
+    }
+
+    .creative-writing {
+      background: rgba(255, 255, 255, 0.45);
+      border-left: 3px solid #c6ad98;
+      border-radius: 0 12px 12px 0;
+      margin-top: 1rem;
+      padding: 1.35rem 1.5rem;
+    }
+
+    .creative-writing p {
+      font-size: 0.96rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .creative-writing p:last-child {
+      margin-bottom: 0;
+    }
+
+    details.beyond {
+      background: rgba(255, 255, 255, 0.45);
+      border: 1px solid #e5ded4;
+      border-radius: 14px;
+      margin-top: 2.6rem;
+      padding: 1.25rem 1.4rem;
+    }
+
+    details.beyond summary {
+      color: #252020;
+      cursor: pointer;
+      font-family: "Merriweather", serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    details.beyond[open] summary {
+      margin-bottom: 1.2rem;
+    }
+
+    .personal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .personal-section h3 {
+      margin-bottom: 0.55rem;
+    }
+
+    .personal-section p,
+    .personal-section li {
+      font-size: 0.92rem;
+    }
+
+    .personal-section ul {
+      margin: 0 0 0 1.2rem;
+    }
+
+    .personal-section li {
+      margin-bottom: 0.25rem;
+    }
+
+    .wide {
+      grid-column: 1 / -1;
+    }
+
+    .personal-image {
+      margin-top: 1.3rem;
+      text-align: center;
+    }
+
+    .personal-image img {
+      display: block;
+      width: min(100%, 560px);
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+      object-fit: cover;
+    }
+
+    .image-caption {
+      color: #716767;
+      font-size: 0.82rem;
+      margin-top: 0.55rem;
     }
 
     @keyframes fadein {
-      from { opacity: 0; transform: translateY(6px);}
-      to   { opacity: 1; transform: translateY(0);}
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-.about-image img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
-  object-fit: cover;
-}
+
     footer {
       margin-top: 60px;
       text-align: center;
       color: #7c7272;
       font-size: 0.85rem;
     }
+
+    @media (max-width: 720px) {
+      .page {
+        margin-top: 40px;
+      }
+
+      .card-grid,
+      .personal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .wide {
+        grid-column: auto;
+      }
+
+      nav {
+        gap: 1.25rem;
+      }
+    }
   </style>
 </head>
 
 <body>
   <div class="page">
-    <h1 class="site-title">Sarah-Sonia Balan</h1>
+    <h1 class="site-title">Sarah-Sonia Balan, FHEA</h1>
     <div class="tagline">Mathematics · Education · Writing</div>
 
     <nav>
@@ -157,100 +317,262 @@
     </nav>
 
     <main>
-      <h2>Mathematics communication and public engagement</h2>
+      <section class="intro">
+        <h2>Writing, communication &amp; public engagement</h2>
 
-      During my university, I've been actively involved in communicating mathematics to wider audiences, with emphasis on the people and contexts behind mathematical ideas. I am interested in education, but also you might find me reading a history of maths article and contemplating how great it would be if such course existed at university!
- My writing and engagement in this area includes
-      <h3>Published articles and blog pieces</h3>
-      <ul>
-        <li>
-          <a href="https://mancunion.com/2025/01/29/the-big-journey-to-fermats-little-theorem/" target="_blank">
-            An article for The Mancunion on Fermat's Little Theorem on the historical and dialogical development behind the result.
+        <p>
+          I enjoy writing about mathematics as something created by people,
+          with a history and a wider cultural context. I am also interested in
+          how mathematics is taught, communicated and experienced by students.
+          Much of my work sits somewhere between those interests.
+        </p>
+      </section>
+
+      <h2 class="section-heading">Selected publications</h2>
+
+      <section class="card-grid" aria-label="Selected publications">
+        <article class="card">
+          <div class="card-label">Research article · 2026</div>
+
+          <h3>
+            1+1 is greater than 1: Developing Scholarship with Students as
+            Partners
+          </h3>
+
+          <p>
+            Co-authored with Professor Louise Walker and Sophie Marshall, this
+            article explores student partnership in mathematics education
+            through projects involving assessment, feedback literacy and
+            abstract algebra teaching.
+          </p>
+
+          <a
+            class="card-link"
+            href="https://journals.gre.ac.uk/index.php/msor/article/view/1681"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read in MSOR Connections →
           </a>
-        </li>
-        <li>
-          <a href="https://vahagnaslanyan.wordpress.com/2025/10/08/the-summer-i-became-a-mathematician-reflections-on-the-lms-summer-school-and-my-project/" target="_blank">
-            My reflections on my LMS-funded summer education project and summer school featured in Dr. Vahagn Aslanyan's blog.
+        </article>
+
+        <article class="card">
+          <div class="card-label">Feature article · 2026</div>
+
+          <h3>Significant figures: Emmy Noether</h3>
+
+          <p>
+            Written for <em>Chalkdust</em>, this piece looks at Noether’s
+            mathematics alongside the barriers she faced, and at the rather
+            extraordinary influence she had on modern algebra and mathematical
+            physics.
+          </p>
+
+          <a
+            class="card-link"
+            href="https://chalkdustmagazine.com/?s=Significant+figures%3A+Emmy+Noether"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read in Chalkdust →
           </a>
-        </li>
-                <li>
-          <a href="https://www.lms.ac.uk/sites/default/files/inline-files/NLMS_517.v5.nocrop_0.pdf" target="_blank">
-           Here you can see the same article published in the 2025 December issue of the LMS Newsletter!
+        </article>
+
+        <article class="card">
+          <div class="card-label">Mathematics writing · 2025</div>
+
+          <h3>The big journey to Fermat’s little theorem</h3>
+
+          <p>
+            An article for <em>The Mancunion</em> about the historical
+            development of Fermat’s little theorem and the mathematical
+            conversations that eventually led to the result we know today.
+          </p>
+
+          <a
+            class="card-link"
+            href="https://mancunion.com/2025/01/29/the-big-journey-to-fermats-little-theorem/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read the article →
           </a>
-        </li>
-                       <li>
- Regular contributions to the Equality, Diversity and Inclusion blog of the University of Manchester's mathematics department, writing about conferences and initiatives supporting underrepresented groups in mathematics (most recently, a conference in Bristol).
-        </li>
-                               <li>
-I am currently awaiting publication of an article on Emmy Noether in the Chalkdust Magazine, focusing on her mathematics alongside the barriers she faced.
-                                 I am happy to share a draft of the article that is currently under review!
-        </li>
-      </ul>
-<h3> Talks and presentations</h3>
-      <li> This includes a couple talks I did at different university societies, and they include: talks about Fermat, famous group theorists in history, linking chaos theory to incompatibilism and much more.
-      </li>
-      
-      <p>
-      A couple talks I did at the Institute of Teaching and Learning conference in July 2025 include:</p>
-        <li>Poster presentation: Generating and Communicating Ideas: Co-creation and Student Voice in Teaching Materials — developed with the Library Student Team, based on analysis of EducateMCR 2025 survey data.
-</li>
-     <li>  Lightning talk: Classic UoM – Student Experience Issues — co-presented with Kai Prince and Dr Neil Morrison (Maths Welfare Tutor), addressing systemic administrative challenges faced by students.
-      </li>
+        </article>
 
+        <article class="card">
+          <div class="card-label">Reflective writing · 2025</div>
 
-      <h2> Creative writing</h2>
+          <h3>The summer I became a mathematician</h3>
 
-      <p>In parallel with my mathematical writing, I maintain a personal writing practice focused on reflection, identity, and language. I write primarily prose, technically under the umbrella term "creative nonfiction", often drawing on existentialist and absurdist frameworks, and I am interested in how voice and form change in response to lived experience.
-Some of this work is unpublished and intentionally personal. 
-       <p> A recent series explores a life-changing medical event and its impact on the self; the leading piece from this series is forthcoming in a small independent zine.</p>
-        
-<p>I have also previously written book reviews for the University of Manchester Library Student Team. More recently, I have moved this reflective writing to a personal blog, where I experiment more.</p>
-        
-This kind of work differs from my mathematical interests, but it is neccessary in the sense that it helps me not lose my head!</p>
-      <h2>Other things that influence me</h2>
-      <h3>Books, essays and beyond</h3>
-      <p>
-        I have quite an interesting relationship with literature and books in general. Some books I read shaped who I am
-        and, for the past year, some books literally helped me recover my language cognition skills. I will outline those
-        books that, if you were to read them, you'd understand a bit better why I am the way I am.
-      </p>
-      <ul>
-        <li><em>The Stranger</em> by Albert Camus</li>
-        <li><em>The Gay Science</em> by Friedrich Nietzsche</li>
-        <li><em>Iona</em> by Marin Sorescu</li>
-        <li><em>Kafka on the Shore</em> by Haruki Murakami</li>
-        <li><em>A Mathematician's Lament</em> by Paul Lockhart</li>
-        <li><em>Love and Math: The Heart of Hidden Reality</em> by Edward Frenkel</li>
-        <li><em>How I Wish I’d Taught Maths</em> by Craig Barton</li>
-      </ul>
+          <p>
+            My reflections on an LMS-funded mathematics education project and
+            the LMS Undergraduate Summer School. The piece first appeared on
+            Dr Vahagn Aslanyan’s blog and was later published in the December
+            2025 issue of the LMS Newsletter.
+          </p>
 
-      <h3>Music</h3>
-      <p>Similarly, here are some albums that shaped me:</p>
-      <ul>
-        <li><em>The Family Jewels</em> by Marina (then Marina and The Diamonds)</li>
-        <li><em>Somewhere In The Between</em> by Streetlight Manifesto</li>
-        <li><em>Tata Kazika</em> by Kult</li>
-        <li><em>Piła tango</em> by Strachy Na Lachy</li>
-        <li><em>The Boy Who Knew Too Much</em> by Mika</li>
-      </ul>
+          <a
+            class="card-link"
+            href="https://vahagnaslanyan.wordpress.com/2025/10/08/the-summer-i-became-a-mathematician-reflections-on-the-lms-summer-school-and-my-project/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read the reflection →
+          </a>
+        </article>
+      </section>
 
-      <h3>Other hobbies</h3>
-      <p>
-        Outside my academic and philosophical interests, I enjoy volunteering and of course, reading. I try my best to be a regular at local reading groups and creative writing workshops. And at Parkrun. Sometimes.
-      </p>
-      <p>
-        Most recently, I volunteered at the Manchester Literature Festival. It was an amazing
-        experience where I got to hear spoken word on reggae beats, meet Marcus du Sautoy, and hear the poems
-        of Seamus Heaney.
-      </p>
-        <div class="about-image">
-    <img src="picwithmarcus.jpg" alt="Sonia" />
-  </div>
+      <h2 class="section-heading">Talks and public engagement</h2>
+
+      <section
+        class="card-grid"
+        aria-label="Talks and public engagement"
+      >
+        <article class="card">
+          <div class="card-label">Conference presentation · 2026</div>
+
+          <h3>RAISE Conference</h3>
+
+          <p>
+            I spoke about student–staff partnership in mathematics, drawing on
+            my abstract algebra education project and the collaborative work
+            that grew from it.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-label">Keynote · Students as Partners</div>
+
+          <h3>LMS and IMA mathematics education meeting</h3>
+
+          <p>
+            I contributed a student perspective to a keynote on developing
+            scholarship with students as partners. That collaboration later
+            became our article in <em>MSOR Connections</em>.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-label">
+            Institute of Teaching and Learning · 2025
+          </div>
+
+          <h3>Co-creation and student voice</h3>
+
+          <p>
+            I presented a poster on co-creating teaching materials with
+            students, developed with the University of Manchester Library
+            Student Team using EducateMCR survey data.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-label">
+            Institute of Teaching and Learning · 2025
+          </div>
+
+          <h3>Student experience and institutional change</h3>
+
+          <p>
+            I co-presented a lightning talk with Kai Prince and Dr Neil Morrison
+            about recurring administrative problems affecting the student
+            experience and how institutions might respond more effectively.
+          </p>
+        </article>
+      </section>
+
+      <h2 class="section-heading">Creative writing</h2>
+
+      <section class="creative-writing">
+        <p>
+          Alongside mathematical writing, I maintain a more personal writing
+          practice focused on reflection, identity and language. I mostly write
+          creative nonfiction, often influenced by existentialist and absurdist
+          ideas, and I am interested in how voice and form change in response to
+          lived experience.
+        </p>
+
+        <p>
+          Some of this work is unpublished and intentionally personal. I have
+          also written book reviews for the University of Manchester Library
+          Student Team and use my personal blog as a space to experiment. This
+          writing is quite different from my mathematical work, but it is
+          necessary in the sense that it helps me not lose my head.
+        </p>
+      </section>
+
+      <details class="beyond">
+        <summary>Beyond mathematics</summary>
+
+        <div class="personal-grid">
+          <section class="personal-section">
+            <h3>Books and essays</h3>
+
+            <p>
+              If you read these, you would probably understand me a little
+              better:
+            </p>
+
+            <ul>
+              <li><em>The Stranger</em> by Albert Camus</li>
+              <li><em>The Gay Science</em> by Friedrich Nietzsche</li>
+              <li><em>Iona</em> by Marin Sorescu</li>
+              <li><em>Kafka on the Shore</em> by Haruki Murakami</li>
+              <li>
+                <em>A Mathematician’s Lament</em> by Paul Lockhart
+              </li>
+              <li><em>Love and Math</em> by Edward Frenkel</li>
+              <li>
+                <em>How I Wish I’d Taught Maths</em> by Craig Barton
+              </li>
+            </ul>
+          </section>
+
+          <section class="personal-section">
+            <h3>Music</h3>
+
+            <p>A few albums that have shaped me:</p>
+
+            <ul>
+              <li><em>The Family Jewels</em> by Marina</li>
+              <li>
+                <em>Somewhere in the Between</em> by Streetlight Manifesto
+              </li>
+              <li><em>Tata Kazika</em> by Kult</li>
+              <li><em>Piła tango</em> by Strachy Na Lachy</li>
+              <li>
+                <em>The Boy Who Knew Too Much</em> by Mika
+              </li>
+            </ul>
+          </section>
+
+          <section class="personal-section wide">
+            <h3>Other things I enjoy</h3>
+
+            <p>
+              Outside academic work, I enjoy volunteering, reading,
+              creative-writing workshops and parkrun—sometimes. I also
+              volunteer at the Manchester Literature Festival, where I heard
+              spoken word performed over reggae beats, met Marcus du Sautoy and
+              listened to readings of Seamus Heaney’s poetry.
+            </p>
+
+            <div class="personal-image">
+              <img
+                src="picwithmarcus.jpg"
+                alt="Sonia with mathematician and author Marcus du Sautoy"
+              >
+
+              <p class="image-caption">
+                At the Manchester Literature Festival.
+              </p>
+            </div>
+          </section>
+        </div>
+      </details>
     </main>
 
-    <footer>
-      © 2026 Sonia Balan
-    </footer>
+    <footer>© 2026 Sonia Balan</footer>
   </div>
 </body>
 </html>
