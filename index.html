@@ -8,170 +8,363 @@
 
   <meta
     name="description"
-    content="Personal website of Sarah-Sonia Balan, an MMath Mathematics student interested in algebra, representation theory, mathematics education and writing."
+    content="Personal website of Sarah-Sonia Balan, a final-year MMath Mathematics student at the University of Manchester."
   >
   <meta name="author" content="Sarah-Sonia Balan">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Merriweather:wght@300;700&display=swap"
-    rel="stylesheet"
-  >
-
   <style>
+    :root {
+      --background: #fffdf9;
+      --text: #292929;
+      --green: #3f654d;
+      --pink: #d8899b;
+      --light-green: #dce8dc;
+      --line: #d7d7d0;
+      --muted: #6f6b68;
+    }
+
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
     body {
-      background: #faf8f3;
-      color: #2f2b2b;
-      font-family: "Inter", sans-serif;
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 16px;
-      line-height: 1.75;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--green);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--pink);
     }
 
     .page {
-      max-width: 760px;
-      margin: 55px auto 80px;
-      padding: 0 22px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 38px 32px 55px;
     }
 
     /* Header */
 
     header {
-      margin-bottom: 3.5rem;
+      margin-bottom: 55px;
     }
 
-    h1 {
-      color: #1c1818;
-      font-family: "Merriweather", serif;
-      font-size: clamp(2.1rem, 5vw, 2.7rem);
-      font-weight: 700;
-      line-height: 1.25;
-      margin-bottom: 0.25rem;
+    .top-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 30px;
+      padding-bottom: 17px;
+      border-bottom: 1px solid var(--green);
     }
 
-    .tagline {
-      color: #706666;
-      font-size: 0.95rem;
-      margin-bottom: 1.2rem;
+    .site-name {
+      margin: 0;
+      color: var(--green);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      line-height: 1;
     }
 
     nav {
       display: flex;
+      gap: 20px;
       flex-wrap: wrap;
-      gap: 0.5rem 1.4rem;
     }
 
     nav a {
-      color: #315a9a;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
+    }
+
+    nav a.current {
+      color: var(--pink);
       text-decoration: none;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* Main */
-
-    h2 {
-      color: #1c1818;
-      font-family: "Merriweather", serif;
-      font-size: 1.35rem;
-      line-height: 1.4;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      margin-bottom: 1rem;
-    }
-
-    a {
-      color: #315a9a;
-    }
+    /* Main introduction */
 
     .intro {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 180px;
-      gap: 2.5rem;
+      grid-template-columns: minmax(0, 590px) 1fr;
+      gap: 75px;
       align-items: start;
     }
 
-    .intro-text {
-      min-width: 0;
+    .hello {
+      margin: 0 0 24px;
+      color: var(--green);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      line-height: 1;
     }
 
-    .intro-image img {
+    .intro-text p {
+      margin: 0 0 18px;
+      max-width: 590px;
+    }
+
+    /* Main photograph */
+
+    .main-photo {
+      margin: 0;
+      padding-top: 5px;
+    }
+
+    .main-photo img {
       display: block;
       width: 100%;
       height: auto;
     }
 
-    .caption {
-      color: #756c6c;
-      font-size: 0.78rem;
-      margin-top: 0.4rem;
+    .main-photo figcaption {
+      color: var(--muted);
+      font-size: 0.75rem;
+      margin-top: 6px;
     }
 
-    /* Current section */
+    /* Photo strip */
 
-    .current {
-      border-top: 1px solid #d8d1c8;
-      margin-top: 3rem;
-      padding-top: 2rem;
+    .photo-section {
+      margin: 58px 0 70px;
     }
 
-    .current p {
-      max-width: 620px;
+    .photo-strip {
+      display: grid;
+      grid-template-columns: 0.8fr 1.15fr 0.85fr;
+      gap: 13px;
+      align-items: end;
     }
 
-    /* Links */
-
-    .elsewhere {
-      border-top: 1px solid #d8d1c8;
-      margin-top: 2.8rem;
-      padding-top: 2rem;
+    .photo {
+      margin: 0;
     }
 
-    .elsewhere-links {
+    .photo img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .photo-small img {
+      height: 260px;
+    }
+
+    .photo-large img {
+      height: 340px;
+    }
+
+    .photo figcaption {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.73rem;
+    }
+
+    /* Areas */
+
+    .areas {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      padding-top: 34px;
+      border-top: 1px solid var(--line);
+    }
+
+    .area {
+      max-width: 420px;
+    }
+
+    .area:nth-child(2) {
+      margin-top: 55px;
+    }
+
+    .area-label {
+      margin-bottom: 13px;
+      color: var(--pink);
+      font-size: 0.72rem;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .area h2 {
+      margin: 0 0 13px;
+      color: var(--green);
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .area p {
+      margin: 0 0 15px;
+      font-size: 0.94rem;
+    }
+
+    .area-link {
+      font-size: 0.9rem;
+    }
+
+    /* Education / communication */
+
+    .communication {
+      max-width: 590px;
+      margin: 75px 0 0 20%;
+      padding: 25px 0 25px 25px;
+      border-left: 6px solid var(--light-green);
+    }
+
+    .communication h2 {
+      margin: 0 0 12px;
+      color: var(--green);
+      font-size: 1.35rem;
+      font-weight: 500;
+    }
+
+    .communication p {
+      margin: 0 0 15px;
+      font-size: 0.94rem;
+    }
+
+    /* Personal closing */
+
+    .personal {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 60px;
+      align-items: center;
+      max-width: 800px;
+      margin: 80px 0 0 auto;
+    }
+
+    .personal-text {
+      font-size: 1.08rem;
+      line-height: 1.6;
+    }
+
+    .personal-text strong {
+      color: var(--green);
+      font-weight: 500;
+    }
+
+    .personal img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Contact */
+
+    .hello-again {
+      margin-top: 80px;
+      padding-top: 30px;
+      border-top: 1px solid var(--pink);
+    }
+
+    .hello-again h2 {
+      margin: 0 0 13px;
+      color: var(--green);
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    .contact-links {
       display: flex;
+      gap: 20px;
       flex-wrap: wrap;
-      gap: 0.5rem 1.4rem;
     }
 
-    .elsewhere a {
-      color: #315a9a;
-      font-size: 0.92rem;
-      text-decoration: none;
-    }
-
-    .elsewhere a:hover {
-      text-decoration: underline;
+    .contact-links a {
+      font-size: 0.9rem;
     }
 
     /* Footer */
 
     footer {
-      color: #857b79;
-      font-size: 0.8rem;
-      margin-top: 4rem;
+      margin-top: 60px;
+      color: var(--muted);
+      font-size: 0.74rem;
     }
 
-    @media (max-width: 620px) {
+    /* Mobile */
+
+    @media (max-width: 760px) {
+
       .page {
-        margin-top: 35px;
+        padding: 26px 20px 45px;
+      }
+
+      .top-line {
+        display: block;
+      }
+
+      nav {
+        margin-top: 17px;
+      }
+
+      header {
+        margin-bottom: 42px;
       }
 
       .intro {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        display: block;
       }
 
-      .intro-image {
-        max-width: 220px;
+      .main-photo {
+        width: min(300px, 85%);
+        margin-top: 30px;
+      }
+
+      .photo-strip {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .photo-large {
+        grid-column: 1 / -1;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .photo-small img,
+      .photo-large img {
+        height: auto;
+      }
+
+      .areas {
+        display: block;
+      }
+
+      .area {
+        margin-bottom: 45px;
+      }
+
+      .area:nth-child(2) {
+        margin-top: 0;
+        margin-left: 10%;
+      }
+
+      .communication {
+        margin: 50px 0 0;
+      }
+
+      .personal {
+        display: block;
+        margin-top: 60px;
+      }
+
+      .personal img {
+        width: min(220px, 70%);
+        margin: 25px 0 0 auto;
       }
     }
   </style>
@@ -182,32 +375,41 @@
   <div class="page">
 
     <header>
-      <h1>Sarah-Sonia Balan</h1>
 
-      <div class="tagline">
-        mathematician · educator · occasional writer
+      <div class="top-line">
+
+        <div class="site-name">
+          Sarah-Sonia Balan
+        </div>
+
+        <nav aria-label="Main navigation">
+          <a href="index.html" class="current">home</a>
+          <a href="maths.html">mathematics</a>
+          <a href="writing.html">writing</a>
+          <a href="contact.html">say hello</a>
+        </nav>
+
       </div>
 
-      <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="maths.html">Mathematics</a>
-        <a href="writing.html">Writing</a>
-        <a href="contact.html">Contact</a>
-      </nav>
     </header>
 
+
     <main>
+
+      <!-- INTRODUCTION -->
 
       <section class="intro">
 
         <div class="intro-text">
-          <h2>Hello!</h2>
+
+          <h1 class="hello">Hi, I’m Sonia.</h1>
 
           <p>
-            I’m Sonia, a final-year MMath Mathematics student at the
-            University of Manchester. I am especially interested in
-            noncommutative algebra, quantum groups and representation theory,
-            although I am generally drawn to questions that link different areas of algebra.
+            I’m Sonia, a final-year MMath Mathematics student at the University
+            of Manchester. I am especially interested in noncommutative algebra,
+            quantum groups and representation theory, although I am generally
+            drawn to general structural questions and connections between
+            different areas of algebra.
           </p>
 
           <p>
@@ -215,50 +417,199 @@
             projects. My third-year project explored Ore extensions,
             Noetherianity and prime ideals, while my summer research at the
             University of Edinburgh focused on representations of a quantum
-            Lie superalgebra. This year, my MMath project is taking me into
-            supersingular elliptic curves and quaternion algebras.
+            Lie superalgebra. This year, I am beginning an MMath project
+            involving supersingular elliptic curves and their associated
+            quaternion algebras.
           </p>
 
           <p>
             I also care a great deal about mathematics education and the
-            experience of learning mathematics. I am a Fellow of Advance HE
-            and have worked with students and academic staff on educational
-            research and the design of teaching resources.
+            experience of learning mathematics. I am a Fellow of the Higher
+            Education Academy and have worked with students and academic staff
+            on educational research and designing teaching resources.
           </p>
 
           <p>
-            Writing is another important part of what I do. I care deeply
-            about creativity and community. I’m originally from Romania,
-            but Manchester is my chosen home!
+            Writing is another important part of what I do. I care deeply about
+            creativity and community. I’m originally from Romania, but
+            Manchester is my chosen home!
           </p>
+
         </div>
 
-        <div class="intro-image">
-          <img src="sonia.jpg" alt="Sonia Balan">
+
+        <figure class="main-photo">
+
+          <img
+            src="sonia3.jpg"
+            alt="Portrait photograph of Sonia"
+          >
+
+          <figcaption>
+            Manchester
+          </figcaption>
+
+        </figure>
+
+      </section>
+
+
+      <!-- PHOTOS -->
+
+      <section class="photo-section" aria-label="A few photographs">
+
+        <div class="photo-strip">
+
+          <figure class="photo photo-small">
+
+            <img
+              src="running.jpg"
+              alt="Photograph of Sonia"
+            >
+
+            <figcaption>
+              hello :)
+            </figcaption>
+
+          </figure>
+
+
+          <figure class="photo photo-large">
+
+            <img
+              src="volunteeringaward.jpg"
+              alt="Photograph from a volunteering awards event"
+            >
+
+            <figcaption>
+              Volunteering Awards
+            </figcaption>
+
+          </figure>
+
+
+          <figure class="photo photo-small">
+
+            <img
+              src="halfmarathon"
+              alt="Photograph with a medal after the Manchester Half"
+            >
+
+            <figcaption>
+              Manchester Half - I fundaised £520 for the Stroke Association!
+            </figcaption>
+
+          </figure>
+
         </div>
 
       </section>
 
-      <section class="current">
-        <h2>At the moment</h2>
 
-        <p>
-          I’m working on supersingular elliptic curves and quaternion
-          algebras for my MMath project. Meanwhile, I continue finding myself reading mathematical physics articles.
-        </p>
+      <!-- MATHEMATICS + WRITING -->
 
-        <p>
-          Away from the mathematics, I write about things that interest me,
-          read rather too much, volunteer when I can, and occasionally
-          convince myself that I enjoy running.
-        </p>
+      <section class="areas">
+
+        <div class="area">
+
+          <div class="area-label">
+            things I think about
+          </div>
+
+          <h2>Mathematics</h2>
+
+          <p>
+            I gravitate most towards noncommutative algebra and representation
+            theory and everything in between. My current MMath project is also
+            giving me the chance to explore arithmetic geometry.
+          </p>
+
+          <a class="area-link" href="maths.html">
+            what I’ve worked on →
+          </a>
+
+        </div>
+
+
+        <div class="area">
+
+          <div class="area-label">
+            things I write about
+          </div>
+
+          <h2>Writing</h2>
+
+          <p>
+            I enjoy writing about mathematics as something created by people,
+            with a history and a wider cultural context. I am also interested
+            in how mathematics is taught, communicated and experienced by
+            students.
+          </p>
+
+          <a class="area-link" href="writing.html">
+            things I’ve written →
+          </a>
+
+        </div>
+
       </section>
 
-      <section class="elsewhere">
-        <h2>Elsewhere</h2>
 
-        <div class="elsewhere-links">
-          <a href="contact.html">Email</a>
+      <!-- EDUCATION AND COMMUNICATION -->
+
+      <section class="communication">
+
+        <h2>Education & communication</h2>
+
+        <p>
+          I also care a great deal about mathematics education and the
+          experience of learning mathematics. I have worked with students and
+          academic staff on educational research, student partnership and
+          designing teaching resources.
+        </p>
+
+        <a href="writing.html">
+          talks, publications and other things →
+        </a>
+
+      </section>
+
+
+      <!-- PERSONAL -->
+
+      <section class="personal">
+
+        <div class="personal-text">
+
+          <p>
+            <strong>I care deeply about creativity and community.</strong>
+          </p>
+
+          <p>
+            I’m originally from Romania, but Manchester is my chosen home!
+          </p>
+
+        </div>
+
+        <img
+          src="running pic.jpeg"
+          alt="Outdoor photograph"
+        >
+
+      </section>
+
+
+      <!-- CONTACT -->
+
+      <section class="hello-again">
+
+        <h2>Say hello</h2>
+
+        <div class="contact-links">
+
+          <a href="mailto:sarahsoniabalan@gmail.com">
+            email
+          </a>
 
           <a
             href="https://www.linkedin.com/in/sarah-sonia-balan"
@@ -273,12 +624,15 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            Academic CV
+            academic CV
           </a>
+
         </div>
+
       </section>
 
     </main>
+
 
     <footer>
       © 2026 Sonia Balan
@@ -288,4 +642,3 @@
 
 </body>
 </html>
-
