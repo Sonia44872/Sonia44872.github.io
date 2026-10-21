@@ -79,30 +79,29 @@
       white-space: nowrap;
     }
 
-    nav {
-      display: flex;
-      flex: 0 0 auto;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-      white-space: nowrap;
-    }
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+}
 
-    nav a {
-      display: inline-block;
-      flex: 0 0 auto;
-      margin: 0;
-      padding: 0;
-      font-size: 0.9rem;
-      white-space: nowrap;
-    }
+nav a {
+  display: inline-block;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
 
-    nav a.current {
-      color: var(--pink);
-      text-decoration: none;
-    }
+nav a[aria-current="page"] {
+  color: var(--pink);
+  text-decoration: none;
+}
 
     /* Introduction */
 
