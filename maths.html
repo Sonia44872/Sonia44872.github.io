@@ -18,7 +18,6 @@
       --text: #292929;
       --green: #3f654d;
       --pink: #d8899b;
-      --light-green: #dce8dc;
       --line: #d7d7d0;
       --muted: #6f6b68;
     }
@@ -63,28 +62,32 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      gap: 30px;
+      gap: 40px;
       padding-bottom: 17px;
       border-bottom: 1px solid var(--green);
     }
 
     .site-name {
+      flex-shrink: 0;
       margin: 0;
       color: var(--green);
-      font-size: clamp(2rem, 5vw, 3rem);
+      font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 600;
       letter-spacing: -0.04em;
       line-height: 1;
+      white-space: nowrap;
     }
 
     nav {
       display: flex;
+      justify-content: flex-end;
       gap: 20px;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
     }
 
     nav a {
       font-size: 0.9rem;
+      white-space: nowrap;
     }
 
     nav a.current {
@@ -95,10 +98,7 @@
     /* Introduction */
 
     .intro {
-      display: grid;
-      grid-template-columns: minmax(0, 590px) 1fr;
-      gap: 75px;
-      align-items: start;
+      max-width: 700px;
       margin-bottom: 65px;
     }
 
@@ -113,11 +113,10 @@
 
     .intro p {
       margin: 0 0 18px;
-      max-width: 590px;
     }
 
     .thinking {
-      margin-top: 48px;
+      margin-top: 28px !important;
       color: var(--pink);
     }
 
@@ -145,6 +144,10 @@
       margin: 0 0 16px;
     }
 
+    .project-context {
+      margin-bottom: 15px;
+    }
+
     .supervisor {
       color: var(--muted);
     }
@@ -152,25 +155,17 @@
     /* Current project */
 
     .current {
-      display: grid;
-      grid-template-columns: minmax(0, 590px) 1fr;
-      gap: 75px;
-      align-items: start;
-      padding-top: 34px;
+      max-width: 720px;
+      padding-top: 35px;
       border-top: 1px solid var(--line);
     }
 
-    .current-project {
-      max-width: 590px;
-    }
-
-    .current-note {
-      margin-top: 45px;
+    .current-label {
+      margin-bottom: 22px;
       color: var(--pink);
-      max-width: 220px;
     }
 
-    /* Algebra projects */
+    /* Research projects */
 
     .algebra {
       margin-top: 70px;
@@ -194,15 +189,11 @@
       max-width: 430px;
     }
 
-    .project-context {
-      margin-bottom: 15px;
-    }
-
     /* Mathematics education */
 
     .education {
       max-width: 720px;
-      margin: 70px 0 0 12%;
+      margin-top: 70px;
     }
 
     .education > h2 {
@@ -210,7 +201,7 @@
     }
 
     .education-project {
-      max-width: 680px;
+      max-width: 690px;
     }
 
     .project-links {
@@ -224,6 +215,8 @@
 
     footer {
       margin-top: 70px;
+      padding-top: 17px;
+      border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: 0.74rem;
     }
@@ -239,7 +232,13 @@
         display: block;
       }
 
+      .site-name {
+        white-space: normal;
+      }
+
       nav {
+        justify-content: flex-start;
+        flex-wrap: wrap;
         margin-top: 17px;
       }
 
@@ -248,21 +247,7 @@
       }
 
       .intro {
-        display: block;
         margin-bottom: 50px;
-      }
-
-      .thinking {
-        margin-top: 28px;
-      }
-
-      .current {
-        display: block;
-      }
-
-      .current-note {
-        margin-top: 24px;
-        max-width: 100%;
       }
 
       .project-pair {
@@ -276,10 +261,6 @@
 
       .project:last-child {
         margin-bottom: 0;
-      }
-
-      .education {
-        margin: 55px 0 0;
       }
     }
   </style>
@@ -314,18 +295,14 @@
 
       <section class="intro">
 
-        <div>
+        <h1>Mathematics</h1>
 
-          <h1>Mathematics</h1>
-
-          <p>
-            I gravitate most towards noncommutative algebra and representation
-            theory and everything in between. I also work in mathematics
-            education, and my current MMath project is giving me the chance to
-            explore arithmetic geometry.
-          </p>
-
-        </div>
+        <p>
+          I gravitate most towards noncommutative algebra and representation
+          theory and everything in between. I also work in mathematics
+          education, and my current MMath project is giving me the chance to
+          explore arithmetic geometry.
+        </p>
 
         <p class="thinking">
           things I spend my time thinking about ↓
@@ -338,7 +315,11 @@
 
       <section class="current">
 
-        <article class="current-project">
+        <p class="current-label">
+          currently
+        </p>
+
+        <article>
 
           <h2>
             Supersingular elliptic curves and quaternion algebras
@@ -361,14 +342,10 @@
 
         </article>
 
-        <p class="current-note">
-          what I’m currently working on :)
-        </p>
-
       </section>
 
 
-      <!-- Algebra research -->
+      <!-- Research in algebra -->
 
       <section class="algebra">
 
@@ -532,4 +509,3 @@
 
 </body>
 </html>
-
