@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Maths &amp; Academic Projects | Sarah-Sonia Balan</title>
+  <title>Maths & Academic Projects | Sarah-Sonia Balan</title>
 
   <meta
     name="description"
@@ -13,7 +13,7 @@
   <meta name="author" content="Sarah-Sonia Balan">
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Merriweather:wght@300;700&amp;display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@300;700&display=swap"
     rel="stylesheet"
   >
 
@@ -59,47 +59,28 @@
       display: flex;
       justify-content: center;
       gap: 2rem;
-      margin-bottom: 3rem;
+      margin-bottom: 3.5rem;
       flex-wrap: wrap;
     }
 
     nav a {
-      text-decoration: none;
       color: #5a4e4e;
       font-size: 0.98rem;
-      position: relative;
-      padding-bottom: 2px;
-      transition: color 0.2s ease;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: #5a4e4e;
-      transition: width 0.25s ease;
+      text-decoration: none;
     }
 
     nav a:hover {
-      color: #2a2323;
-    }
-
-    nav a:hover::after {
-      width: 100%;
+      color: #1c1818;
+      text-decoration: underline;
     }
 
     main {
-      opacity: 0;
-      animation: fadein 0.9s ease forwards;
+      max-width: 760px;
+      margin: 0 auto;
     }
 
     .intro {
-      max-width: 720px;
-      margin: 0 auto 2rem;
-      text-align: center;
+      margin-bottom: 3rem;
     }
 
     h2 {
@@ -115,35 +96,20 @@
     }
 
     .project-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.25rem;
-      align-items: stretch;
+      display: block;
     }
 
     .project-card {
-      display: flex;
-      flex-direction: column;
-      background: rgba(255, 255, 255, 0.58);
-      border: 1px solid #e5ded4;
-      border-radius: 14px;
-      padding: 1.45rem;
-      box-shadow: 0 6px 18px rgba(49, 40, 34, 0.045);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 9px 22px rgba(49, 40, 34, 0.075);
+      border-top: 1px solid #d8d1c8;
+      padding: 1.7rem 0 2rem;
     }
 
     .project-label {
-      color: #866753;
-      font-size: 0.76rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
+      color: #75675e;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.4rem;
     }
 
     h3 {
@@ -151,43 +117,38 @@
       font-family: "Merriweather", serif;
       font-size: 1.08rem;
       line-height: 1.4;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.65rem;
     }
 
     .project-card p {
-      font-size: 0.94rem;
-      margin-bottom: 0.9rem;
+      font-size: 0.95rem;
+      margin-bottom: 0.8rem;
     }
 
     .supervisor {
-      color: #6b6262;
-      font-size: 0.86rem !important;
+      color: #686060;
+      font-size: 0.87rem !important;
+    }
+
+    .project-card a {
+      color: #315a9a;
+    }
+
+    .project-card a:hover {
+      color: #21406e;
     }
 
     .project-link {
-      align-self: flex-start;
+      display: inline-block;
       color: #315a9a;
       font-size: 0.9rem;
-      font-weight: 500;
-      margin-top: auto;
+      font-weight: 400;
+      margin-top: 0.2rem;
       text-decoration: none;
     }
 
     .project-link:hover {
-      color: #21406e;
       text-decoration: underline;
-    }
-
-    @keyframes fadein {
-      from {
-        opacity: 0;
-        transform: translateY(6px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     footer {
@@ -202,10 +163,6 @@
         margin-top: 40px;
       }
 
-      .project-grid {
-        grid-template-columns: 1fr;
-      }
-
       nav {
         gap: 1.25rem;
       }
@@ -215,6 +172,7 @@
 
 <body>
   <div class="page">
+
     <h1 class="site-title">Sarah-Sonia Balan, FHEA</h1>
     <div class="tagline">Mathematics · Education · Writing</div>
 
@@ -226,25 +184,29 @@
     </nav>
 
     <main>
+
       <section class="intro">
-        <h2>Maths &amp; academic projects</h2>
+        <h2>Maths & academic projects</h2>
 
         <p>
-          I gravitate most towards noncommutative algebra and representation theory and everything in between. I also work in mathematics education,
-          and my current MMath project is giving me the chance to explore arithmetic
-          geometry.
+          I gravitate most towards noncommutative algebra and representation
+          theory and everything in between. I also work in mathematics
+          education, and my current MMath project is giving me the chance to
+          explore arithmetic geometry.
         </p>
       </section>
 
       <section class="project-grid" aria-label="Academic projects">
+
         <article class="project-card">
           <div class="project-label">Current · 2026–27</div>
 
           <h3>Supersingular elliptic curves and quaternion algebras</h3>
 
           <p>
-            For my MMath project, I am beginning to explore supersingular elliptic
-            curves and the quaternion algebras that arise from their endomorphisms.
+            For my MMath project, I am beginning to explore supersingular
+            elliptic curves and the quaternion algebras that arise from their
+            endomorphisms.
           </p>
 
           <p class="supervisor">
@@ -252,17 +214,23 @@
           </p>
         </article>
 
-        <article class="project-card">
-          <div class="project-label">Research internship · Summer 2026</div>
 
-          <h3>Quantum knot invariants built from typical representations of a Lie superalgebra</h3>
+        <article class="project-card">
+          <div class="project-label">
+            Research internship · Summer 2026
+          </div>
+
+          <h3>
+            Quantum knot invariants built from typical representations of a
+            Lie superalgebra
+          </h3>
 
           <p>
-            Through the AGQ CDT’s Count Me In programme, I studied typical
+            Through the AGQ CDT's Count Me In programme, I studied typical
             highest-weight representations of
-            U<sub>h</sub>(sl(3|1)). I used induced Kac modules and the PBW theorem
-            to construct a basis and determine its weights, before moving on to
-            generator actions and braid-group automorphisms.
+            U<sub>h</sub>(sl(3|1)). I used induced Kac modules and the PBW
+            theorem to construct a basis and determine its weights, before
+            moving on to generator actions and braid-group automorphisms.
           </p>
 
           <p class="supervisor">
@@ -270,16 +238,19 @@
           </p>
         </article>
 
+
         <article class="project-card">
-          <div class="project-label">Third-year project · 2025–26</div>
+          <div class="project-label">
+            Third-year project · 2025–26
+          </div>
 
           <h3>Noetherianity of noncommutative polynomial rings</h3>
 
           <p>
-            I studied skew polynomial rings and formal differential operator rings
-            through the unifying language of Ore extensions. The project focused on
-            Noetherianity, simplicity and the behaviour of prime ideals in these
-            noncommutative rings.
+            I studied skew polynomial rings and formal differential operator
+            rings through the unifying language of Ore extensions. The
+            project focused on Noetherianity, simplicity and the behaviour of
+            prime ideals in these noncommutative rings.
           </p>
 
           <p class="supervisor">
@@ -289,37 +260,44 @@
           </p>
         </article>
 
-        <article class="project-card">
-<div class="project-label">LMS undergraduate research bursary · Summer 2025</div>
 
-          <h3>Facilitating effective learning in abstract algebra and proof comprehension</h3>
+        <article class="project-card">
+          <div class="project-label">
+            LMS undergraduate research bursary · Summer 2025
+          </div>
+
+          <h3>
+            Facilitating effective learning in abstract algebra and proof
+            comprehension
+          </h3>
 
           <p>
- Supported by an undergraduate research bursary from the London Mathematical
-  Society, my first research project explored how students learn abstract algebra and how
-  teaching can better support the transition to proof-based mathematics. This
-  project remains my pride and joy, and it led to further work in student
-  partnership, conference presentations and the main case for my Fellowship in Higher Education application.
-</p>
+            Supported by an undergraduate research bursary from the London
+            Mathematical Society, my first research project explored how
+            students learn abstract algebra and how teaching can better
+            support the transition to proof-based mathematics. This project
+            remains my pride and joy, and it led to further work in student
+            partnership, conference presentations and the main case for my
+            Fellowship in Higher Education application.
+          </p>
 
-<p>
-  My work in this area also contributed to the co-authored article
-  <a href="https://journals.gre.ac.uk/index.php/msor/article/view/1681"
-     target="_blank"
-     rel="noopener noreferrer">
-    “1+1 is greater than 1: Developing Scholarship with Students as Partners”
-  </a>,
-  published in <em>MSOR Connections</em> in 2026.
-</p>
+          <p>
+            My work in this area also contributed to the co-authored article
+            <a
+              href="https://journals.gre.ac.uk/index.php/msor/article/view/1681"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              “1+1 is greater than 1: Developing Scholarship with Students as
+              Partners”
+            </a>,
+            published in <em>MSOR Connections</em> in 2026.
+          </p>
 
-<p class="supervisor">
-  Supervised by Professor Louise Walker at the University of Manchester.
-</p>
-
-<a
-  class="project-link"
-  href="Maths_Edu_project____Facilitating_Effective_Learning_in_AA + appendix.pdf"
-  target
+          <p class="supervisor">
+            Supervised by Professor Louise Walker at the University of
+            Manchester.
+          </p>
 
           <a
             class="project-link"
@@ -330,10 +308,14 @@
             Read the project report →
           </a>
         </article>
+
       </section>
     </main>
 
-    <footer>© 2026 Sonia Balan</footer>
+    <footer>
+      © 2026 Sonia Balan
+    </footer>
+
   </div>
 </body>
 </html>
