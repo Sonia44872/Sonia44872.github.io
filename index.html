@@ -42,7 +42,8 @@
       text-underline-offset: 3px;
     }
 
-    a:hover {
+    a:hover,
+    a:focus {
       color: var(--pink);
     }
 
@@ -130,6 +131,7 @@
     .main-photo figcaption {
       color: var(--muted);
       font-size: 0.75rem;
+      line-height: 1.4;
       margin-top: 6px;
     }
 
@@ -141,9 +143,9 @@
 
     .photo-strip {
       display: grid;
-      grid-template-columns: 0.8fr 1.15fr 0.85fr;
-      gap: 13px;
-      align-items: end;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      align-items: start;
     }
 
     .photo {
@@ -153,39 +155,33 @@
     .photo img {
       display: block;
       width: 100%;
+      height: 300px;
       object-fit: cover;
     }
 
-    .photo-small img {
-      height: 260px;
-    }
-
-    .photo-large img {
-      height: 340px;
-    }
-
     .photo figcaption {
-      margin-top: 6px;
+      margin-top: 7px;
       color: var(--muted);
       font-size: 0.73rem;
+      line-height: 1.4;
     }
 
-    /* Areas */
+    /* Mathematics and Writing */
 
     .areas {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 70px;
+      align-items: stretch;
       padding-top: 34px;
       border-top: 1px solid var(--line);
     }
 
     .area {
+      display: flex;
+      flex-direction: column;
       max-width: 420px;
-    }
-
-    .area:nth-child(2) {
-      margin-top: 55px;
+      min-height: 250px;
     }
 
     .area-label {
@@ -211,10 +207,12 @@
     }
 
     .area-link {
+      align-self: flex-start;
+      margin-top: auto;
       font-size: 0.9rem;
     }
 
-    /* Education / communication */
+    /* Education and communication */
 
     .communication {
       max-width: 590px;
@@ -298,7 +296,6 @@
     /* Mobile */
 
     @media (max-width: 760px) {
-
       .page {
         padding: 26px 20px 45px;
       }
@@ -325,19 +322,14 @@
       }
 
       .photo-strip {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 28px;
       }
 
-      .photo-large {
-        grid-column: 1 / -1;
-        width: 75%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .photo-small img,
-      .photo-large img {
+      .photo img {
         height: auto;
+        max-height: 460px;
+        object-fit: cover;
       }
 
       .areas {
@@ -345,12 +337,13 @@
       }
 
       .area {
+        min-height: 0;
+        max-width: 100%;
         margin-bottom: 45px;
       }
 
-      .area:nth-child(2) {
-        margin-top: 0;
-        margin-left: 10%;
+      .area-link {
+        margin-top: 5px;
       }
 
       .communication {
@@ -393,10 +386,9 @@
 
     </header>
 
-
     <main>
 
-      <!-- INTRODUCTION -->
+      <!-- Introduction -->
 
       <section class="intro">
 
@@ -436,34 +428,32 @@
 
         </div>
 
-
         <figure class="main-photo">
 
           <img
             src="picwithATBbg.jpeg"
-            alt="Portrait photograph of Sonia"
+            alt="Sonia in the Alan Turing Building at the University of Manchester"
           >
 
           <figcaption>
-           me in the Alan Turing Building at the University of Manchester
+            me in the Alan Turing Building at the University of Manchester
           </figcaption>
 
         </figure>
 
       </section>
 
-
-      <!-- PHOTOS -->
+      <!-- Photographs -->
 
       <section class="photo-section" aria-label="A few photographs">
 
         <div class="photo-strip">
 
-          <figure class="photo photo-small">
+          <figure class="photo">
 
             <img
               src="picwithmarcus.jpg"
-              alt="Photograph of Sonia"
+              alt="Sonia volunteering at the Manchester Literature Festival"
             >
 
             <figcaption>
@@ -472,12 +462,11 @@
 
           </figure>
 
-
-          <figure class="photo photo-large">
+          <figure class="photo">
 
             <img
               src="sonia.jpg"
-              alt="Photograph from a volunteering awards event"
+              alt="Sonia at the Volunteering Awards"
             >
 
             <figcaption>
@@ -486,16 +475,15 @@
 
           </figure>
 
-
-          <figure class="photo photo-small">
+          <figure class="photo">
 
             <img
               src="halfmarathonpic.jpeg"
-              alt="Photograph with a medal after the Manchester Half"
+              alt="Sonia holding a medal after the Manchester Half"
             >
 
             <figcaption>
-              Manchester Half - I fundaised £520 for the Stroke Association!
+              Manchester Half – I fundraised £520 for the Stroke Association!
             </figcaption>
 
           </figure>
@@ -504,8 +492,7 @@
 
       </section>
 
-
-      <!-- MATHEMATICS + WRITING -->
+      <!-- Mathematics and Writing -->
 
       <section class="areas">
 
@@ -528,7 +515,6 @@
           </a>
 
         </div>
-
 
         <div class="area">
 
@@ -553,12 +539,11 @@
 
       </section>
 
-
-      <!-- EDUCATION AND COMMUNICATION -->
+      <!-- Education and communication -->
 
       <section class="communication">
 
-        <h2>Education & communication</h2>
+        <h2>Education &amp; communication</h2>
 
         <p>
           I also care a great deal about mathematics education and the
@@ -573,8 +558,7 @@
 
       </section>
 
-
-      <!-- PERSONAL -->
+      <!-- Personal -->
 
       <section class="personal">
 
@@ -590,11 +574,9 @@
 
         </div>
 
-
       </section>
 
-
-      <!-- CONTACT -->
+      <!-- Contact -->
 
       <section class="hello-again">
 
@@ -627,7 +609,6 @@
       </section>
 
     </main>
-
 
     <footer>
       © 2026 Sonia Balan
